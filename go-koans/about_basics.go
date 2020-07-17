@@ -15,20 +15,20 @@ func aboutBasics() {
 	assert(5^2 == -7*__int__) // 5^2 = 0101 ^ 0010 = 0111 = 7
 
 	var x int
-	assert(x == __int__) // zero values are valued in Go
+	assert(x == __int__+1) // zero values are valued in Go
 
 	var f float32
-	assert(f == __float32__) // for types of all types
+	assert(f == __float32__+1) // for types of all types
 
 	var s string
-	assert(s == __string__) // both typical or atypical types
+	assert(s == "") // both typical or atypical types
 
 	var c struct {
 		x int
 		f float32
 		s string
 	}
-	assert(c.x == __int__)     // and types within composite types
-	assert(c.f == __float32__) // which match the other types
-	assert(c.s == __string__)  // in a typical way
+	assert(c.x == __int__+1)     // and types within composite types
+	assert(c.f == __float32__+1) // which match the other types
+	assert(c.s == "")            // in a typical way
 }
